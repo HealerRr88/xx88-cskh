@@ -10,11 +10,11 @@ document.getElementsByClassName("download-app")[0].addEventListener("click", fun
     }
   });
 
-  document.querySelector(".back-home").addEventListener("click", function(e) {
-    e.preventDefault(); 
-    if (window.history.length > 1) {
-      window.history.back();
-    } else {
-      window.location.href = "/"; 
-    }
-  });
+  // document.querySelector(".back-home").addEventListener("click", function(e) {
+  //   e.preventDefault(); 
+  //   if (window.history.length > 1) {
+  //     window.history.back();
+  //   } else {
+  //     window.location.href = "/"; 
+  //   }
+  // });
