@@ -22,7 +22,7 @@ import pcStyles from "./style.module.css";
 import { Link } from "react-router-dom";
 import AppDownloadComponent from "../../../components/app_download";
 import LinksComponent from "../../../components/links";
-import { CODE_FREE_URL, DAILY_URL, FACEBOOK_URL, HUONG_DAN_URL, KENH_SU_KIEN_URL, KHIEU_NAI_URL, KHUYEN_MAI_URL, LIVESTREAM_URL, NAP_TIEN_URL, QUA_TANG_URL, RUT_TIEN_URL, TAI_KHOAN_URL, TELEGRAM_URL } from "../../../utils/config";
+import { CODE_FREE_URL, DAILY_URL, FACEBOOK_URL, HOTLINE_NUMBER, HUONG_DAN_URL, KENH_SU_KIEN_URL, KHIEU_NAI_URL, KHUYEN_MAI_URL, LIVESTREAM_URL, NAP_TIEN_URL, QUA_TANG_URL, RUT_TIEN_URL, TAI_KHOAN_URL, TELEGRAM_URL } from "../../../utils/config";
 
 export default function PCPage() {
   return (
@@ -70,7 +70,7 @@ export default function PCPage() {
 
       <div className="text-center">
         <div className={`d-inline-flex gap-5 mt-4 ${pcStyles.barMenu}`}>
-          <Link className="d-flex flex-column justify-content-center align-items-center gap-1">
+          <Link to={`tel:${HOTLINE_NUMBER}`} className="d-flex flex-column justify-content-center align-items-center gap-1">
             <img className={pcStyles.barMenuIcon} src={hotline_icon} alt="Hotline" />
             <span>Hotline</span>
           </Link>

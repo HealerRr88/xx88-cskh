@@ -7,10 +7,10 @@ export const TAI_KHOAN_URL = "https://secure.livechatinc.com/licence/19230099/v2
 export const KHIEU_NAI_URL = "https://t.me/XX88KHIEUNAI";
 export const TELEGRAM_URL = "https://t.me/BOTCSKHXX88_BOT";
 
-export const IOS_APP_URL = "https://images.1097638.com/wsd-images-prod/xx88vndkf1/merchant_resource/mobileconfig/xx88vndkf1_2.4.3_20250703183454.mobileconfig";
-export const ANDROID_APP_URL = "https://images.1097638.com/wsd-images-prod/xx88vndkf1/merchant_resource/android/xx88vndkf1_2.4.67_20250703183520.apk";
+export const IOS_APP_URL = "https://images.21947392.com/wsd-images-prod/xx88vndkf1/merchant_resource/mobileconfig/xx88vndkf1_2.4.3_20251118215950.mobileconfig";
+export const ANDROID_APP_URL = "https://images.21947392.com/wsd-images-prod/xx88vndkf1/merchant_resource/android/xx88vndkf1_2.4.79_20251118220009.apk";
 
-export const HOTLINE_NUMBER = "+84 567880999";
+export const HOTLINE_NUMBER = "+84567880999";
 export const ADMIN_EMAIL_ADDRESS = "admin@xx88.com";
 export const DAILY_URL = "https://t.me/XX88_CSDL";
 export const CODE_FREE_URL = "https://t.me/addlist/99-lKL2uuPhlYzY8";

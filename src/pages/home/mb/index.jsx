@@ -30,11 +30,11 @@ import './styles.css';
 import prevIcon from '../../../assets/images/prev-icon.png';
 import nextIcon from '../../../assets/images/next-icon.png';
 import AppDownloadComponent from "../../../components/app_download";
-import { KHIEU_NAI_URL, KHUYEN_MAI_URL, NAP_TIEN_URL, RUT_TIEN_URL, TAI_KHOAN_URL, TELEGRAM_URL } from "../../../utils/config";
+import { CODE_FREE_URL, DAILY_URL, FACEBOOK_URL, HOTLINE_NUMBER, HUONG_DAN_URL, KENH_SU_KIEN_URL, KHIEU_NAI_URL, KHUYEN_MAI_URL, LIVESTREAM_URL, NAP_TIEN_URL, QUA_TANG_URL, RUT_TIEN_URL, TAI_KHOAN_URL, TELEGRAM_URL } from "../../../utils/config";
 
 export default function MBPage() {
   return (
-    <div className="pb-4">
+    <div className="pb-5">
       <HeaderComponent />
 
       <div className="container d-flex flex-wrap gap-2 justify-content-center align-items-center mt-3">
@@ -80,49 +80,49 @@ export default function MBPage() {
             onSwiper={(swiper) => { }}
           >
             <SwiperSlide>
-              <Link to={'#'} className="d-flex flex-column justify-content-center align-items-center gap-1">
+              <Link to={`tel:${HOTLINE_NUMBER}`} className="d-flex flex-column justify-content-center align-items-center gap-1">
                 <img className={styles.barMenuIcon} src={hotline_icon} alt="Hotline" />
                 <span>Hotline</span>
               </Link>
             </SwiperSlide>
             <SwiperSlide>
-              <Link className="d-flex flex-column justify-content-center align-items-center gap-1">
+              <Link to={DAILY_URL} className="d-flex flex-column justify-content-center align-items-center gap-1">
                 <img className={styles.barMenuIcon} src={dai_ly_icon} alt="Đại lý" />
                 <span>Đại lý</span>
               </Link>
             </SwiperSlide>
             <SwiperSlide>
-              <Link className="d-flex flex-column justify-content-center align-items-center gap-1">
+              <Link to={CODE_FREE_URL} className="d-flex flex-column justify-content-center align-items-center gap-1">
                 <img className={styles.barMenuIcon} src={code_free_icon} alt="Code Free" />
                 <span>Code Free</span>
               </Link>
             </SwiperSlide>
             <SwiperSlide>
-              <Link className="d-flex flex-column justify-content-center align-items-center gap-1">
+              <Link to={FACEBOOK_URL} className="d-flex flex-column justify-content-center align-items-center gap-1">
                 <img className={styles.barMenuIcon} src={facebook_icon} alt="Facebook" />
                 <span>Facebook</span>
               </Link>
             </SwiperSlide>
             <SwiperSlide>
-              <Link className="d-flex flex-column justify-content-center align-items-center gap-1">
+              <Link to={QUA_TANG_URL} className="d-flex flex-column justify-content-center align-items-center gap-1">
                 <img className={styles.barMenuIcon} src={qua_tang_icon} alt="Quà tặng" />
                 <span>Quà tặng</span>
               </Link>
             </SwiperSlide>
             <SwiperSlide>
-              <Link className="d-flex flex-column justify-content-center align-items-center gap-1">
+              <Link to={HUONG_DAN_URL} className="d-flex flex-column justify-content-center align-items-center gap-1">
                 <img className={styles.barMenuIcon} src={huong_dan_icon} alt="Hướng dẫn" />
                 <span>Hướng dẫn</span>
               </Link>
             </SwiperSlide>
             <SwiperSlide>
-              <Link className="d-flex flex-column justify-content-center align-items-center gap-1">
+              <Link to={KENH_SU_KIEN_URL} className="d-flex flex-column justify-content-center align-items-center gap-1">
                 <img className={styles.barMenuIcon} src={kenh_su_kien_icon} alt="Kênh sự kiện" />
                 <span>Kênh sự kiện</span>
               </Link>
             </SwiperSlide>
             <SwiperSlide>
-              <Link className="d-flex flex-column justify-content-center align-items-center gap-1">
+              <Link to={LIVESTREAM_URL} className="d-flex flex-column justify-content-center align-items-center gap-1">
                 <img className={styles.barMenuIcon} src={livestream_icon} alt="Livestream" />
                 <span>Livestream</span>
               </Link>
