@@ -4,6 +4,7 @@ import phoneIcon from '../../assets/images/phone-icon.png';
 import emailIcon from '../../assets/images/email-icon.png';
 import styles from './style.module.css';
 import { BACK_HOME_URL } from '../../utils/config';
+import { isMobile } from 'react-device-detect';
 
 export default function HeaderComponent() {
   return (
@@ -19,7 +20,13 @@ export default function HeaderComponent() {
         </div>
       </div>
 
-      <div className={`mt-3 ${styles.title}`}>TRUNG TÂM DỊCH VỤ KHÁCH HÀNG</div>
+      {
+        isMobile ? (
+          <div className={`mt-3 ${styles.title}`}>TRUNG TÂM <br /> DỊCH VỤ KHÁCH HÀNG</div>
+        ) : (
+          <div className={`mt-3 ${styles.title}`}>TRUNG TÂM DỊCH VỤ KHÁCH HÀNG</div>
+        )
+      }
 
       <div className={`w-100 d-flex align-items-center justify-content-center mt-3`}>
         <div className={`d-flex align-items-center justify-content-center px-md-5 px-3 py-md-3 py-1 gap-4 ${styles.phoneAndEmail}`}>
