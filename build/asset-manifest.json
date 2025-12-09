@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/static/css/main.623bef27.css",
+    "main.js": "/static/js/main.1c57d5c6.js",
+    "static/css/819.cd761bcb.chunk.css": "/static/css/819.cd761bcb.chunk.css",
+    "static/js/819.b31b36e4.chunk.js": "/static/js/819.b31b36e4.chunk.js",
+    "static/js/956.1f9eebd4.chunk.js": "/static/js/956.1f9eebd4.chunk.js",
+    "static/js/390.ee94d215.chunk.js": "/static/js/390.ee94d215.chunk.js",
+    "static/media/grid-menu-center-item.png": "/static/media/grid-menu-center-item.cc2d7bcb437eb1a21007.png",
+    "static/media/bg-download-btn.png": "/static/media/bg-download-btn.6a2ac4e0ff18850b8297.png",
+    "static/media/bg-home-btn.png": "/static/media/bg-home-btn.a57f9c317f8202033165.png",
+    "static/media/huong-dan-icon.png": "/static/media/huong-dan-icon.e458b9f100b9acbc8314.png",
+    "static/media/ios-qr.png": "/static/media/ios-qr.630eaa06dd841890e247.png",
+    "static/media/qua-tang-icon.png": "/static/media/qua-tang-icon.8126491efe54a6230fd8.png",
+    "static/media/dai-ly-icon.png": "/static/media/dai-ly-icon.01a5bddd95f3b5edf513.png",
+    "static/media/kenh-su-kien-icon.png": "/static/media/kenh-su-kien-icon.4d71f6d4240bc7e66de5.png",
+    "static/media/code-free-icon.png": "/static/media/code-free-icon.a84c3ae037bdcc5596fa.png",
+    "static/media/livestream-icon.png": "/static/media/livestream-icon.fe556d9c90ba60471b98.png",
+    "static/media/android-qr.png": "/static/media/android-qr.16fa4e008406e1753b70.png",
+    "static/media/hotline-icon.png": "/static/media/hotline-icon.0bb736a3badd51d86da6.png",
+    "static/media/facebook-icon.png": "/static/media/facebook-icon.a468d76af9d50c8e136a.png",
+    "static/media/404-page-not-found.png": "/static/media/404-page-not-found.4809eda2679d82a2256d.png",
+    "index.html": "/index.html",
+    "main.623bef27.css.map": "/static/css/main.623bef27.css.map",
+    "main.1c57d5c6.js.map": "/static/js/main.1c57d5c6.js.map",
+    "819.cd761bcb.chunk.css.map": "/static/css/819.cd761bcb.chunk.css.map",
+    "819.b31b36e4.chunk.js.map": "/static/js/819.b31b36e4.chunk.js.map",
+    "956.1f9eebd4.chunk.js.map": "/static/js/956.1f9eebd4.chunk.js.map",
+    "390.ee94d215.chunk.js.map": "/static/js/390.ee94d215.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.623bef27.css",
+    "static/js/main.1c57d5c6.js"
+  ]
+}

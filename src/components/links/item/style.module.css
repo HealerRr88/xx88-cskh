@@ -1,0 +1,49 @@
+.link {
+  width: 202px;
+  max-width: 202px;
+}
+
+.leftLink {
+  position: absolute;
+  left: 15%;
+}
+
+.linkName {
+  color: white;
+  font-weight: 900;
+  line-height: 18px;
+}
+
+.linkCTA {
+  font-size: 14px;
+  color: white;
+  font-weight: 500;
+}
+
+.linkSpeed {
+  font-weight: 700;
+  font-size: 18px;
+  color: #1C6783;
+  position: absolute;
+  right: 10%;
+}
+
+@media screen and (max-width: 768px) {
+  .link {
+    width: calc(100% / 3 - 8px);
+    max-width: auto;
+  }
+
+  .linkName {
+    font-size: 11px;
+    line-height: 12px;
+  }
+
+  .linkCTA {
+    font-size: 9px;
+  }
+
+  .linkSpeed {
+    font-size: 10px;
+  }
+}

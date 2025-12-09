@@ -1,0 +1,16 @@
+.downloadBtn {
+  background-image: url('../../assets/images/bg-download-btn.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 51px;
+  font-size: 22px;
+  color: #FFFFFF;
+}
+
+@media screen and (max-width: 768px) {
+  .downloadBtn {
+    font-size: 13px;
+    height: 36px;
+  }
+}

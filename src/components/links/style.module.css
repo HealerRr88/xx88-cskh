@@ -1,0 +1,12 @@
+.title {
+  font-weight: 900;
+  font-size: 33px;
+  text-align: center;
+  color: #00AEEF;
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,11 @@
+.gridMenuItem {
+  width: 215px;
+  height: 88px;
+
+  background: rgba(138, 197, 218, 0.3);
+  border: 1px solid #00AEEF;
+  border-radius: 10px;
+  font-weight: 900;
+  font-size: 16px;
+  color: #00AEEF;
+}

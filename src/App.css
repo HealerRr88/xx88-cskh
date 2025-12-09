@@ -1,0 +1,13 @@
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #effbff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
