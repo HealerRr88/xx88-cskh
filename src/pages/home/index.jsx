@@ -4,6 +4,7 @@ import { isMobile } from "react-device-detect";
 
 export default function HomePage() {
 
+  //Comment to trigger rebuild
   const PageComponent = isMobile ? MBPage : PCPage;
 
   return (
