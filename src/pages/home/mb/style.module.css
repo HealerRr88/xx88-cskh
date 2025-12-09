@@ -5,9 +5,7 @@
   font-weight: 900;
   font-size: 12px;
   color: #00AEEF;
-  min-height: 81px;
-  min-width: 114px;
-  max-width: calc(100% / 3 - 8px);
+  width: calc(100% / 3 - 8px);
 }
 
 .gridMenuItemIcon {
