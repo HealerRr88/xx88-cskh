@@ -19,7 +19,7 @@ export default function HeaderComponent() {
         </div>
       </div>
 
-      <div className={`mt-3 ${styles.title}`}>TRUNG TÂM CHĂM SÓC KHÁCH HÀNG</div>
+      <div className={`mt-3 ${styles.title}`}>TRUNG TÂM DỊCH VỤ KHÁCH HÀNG</div>
 
       <div className={`w-100 d-flex align-items-center justify-content-center mt-3`}>
         <div className={`d-flex align-items-center justify-content-center px-md-5 px-3 py-md-3 py-1 gap-4 ${styles.phoneAndEmail}`}>
