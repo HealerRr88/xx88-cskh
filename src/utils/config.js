@@ -8,7 +8,9 @@ export const KHIEU_NAI_URL = "https://t.me/XX88KHIEUNAI";
 export const TELEGRAM_URL = "https://t.me/BOTCSKHXX88_BOT";
 
 export const IOS_APP_URL = "https://images.21947392.com/wsd-images-prod/xx88vndkf1/merchant_resource/mobileconfig/xx88vndkf1_2.4.3_20251118215950.mobileconfig";
+export const IOS_DOWNLOAD_BTN_URL = "https://xx88-download-app.pages.dev/";
 export const ANDROID_APP_URL = "https://images.21947392.com/wsd-images-prod/xx88vndkf1/merchant_resource/android/xx88vndkf1_2.4.79_20251118220009.apk";
+export const ANDROID_DOWNLOAD_BTN_URL = "https://xx88-download-app.pages.dev/";
 
 export const HOTLINE_NUMBER = "+84567880999";
 export const ADMIN_EMAIL_ADDRESS = "admin@xx88.com";

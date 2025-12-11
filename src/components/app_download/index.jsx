@@ -4,7 +4,7 @@ import appstore_btn from "../../assets/images/appstore-btn.png";
 import googleplay_btn from "../../assets/images/googleplay-btn.png";
 import { Link } from "react-router-dom";
 import styles from "./style.module.css";
-import { ANDROID_APP_URL, IOS_APP_URL } from "../../utils/config";
+import { ANDROID_APP_URL, ANDROID_DOWNLOAD_BTN_URL, IOS_APP_URL, IOS_DOWNLOAD_BTN_URL } from "../../utils/config";
 
 export default function AppDownloadComponent() {
   return (
@@ -15,7 +15,7 @@ export default function AppDownloadComponent() {
             <img className="w-100" src={ios_qr} alt="ios_qr" />
           </div>
           <div className="ms-md-3 ms-2 flex-fill d-flex flex-column align-items-center justify-content-center">
-            <Link to={IOS_APP_URL} className={`w-100 d-flex justify-content-center align-items-center ${styles.downloadBtn}`}>TẢI XUỐNG</Link>
+            <Link to={IOS_DOWNLOAD_BTN_URL} className={`w-100 d-flex justify-content-center align-items-center ${styles.downloadBtn}`}>TẢI XUỐNG</Link>
             <div className="mt-md-3 mt-1">
               <Link to={IOS_APP_URL}>
                 <img className="w-100" src={appstore_btn} alt="App Store Button" />
@@ -28,7 +28,7 @@ export default function AppDownloadComponent() {
             <img className="w-100" src={android_qr} alt="android_qr" />
           </div>
           <div className="ms-md-3 ms-2 flex-fill d-flex flex-column align-items-center justify-content-center">
-            <Link to={ANDROID_APP_URL} className={`w-100 d-flex justify-content-center align-items-center ${styles.downloadBtn}`}>TẢI XUỐNG</Link>
+            <Link to={ANDROID_DOWNLOAD_BTN_URL} className={`w-100 d-flex justify-content-center align-items-center ${styles.downloadBtn}`}>TẢI XUỐNG</Link>
             <div className="mt-md-3 mt-1">
               <Link to={ANDROID_APP_URL}>
                 <img className="w-100" src={googleplay_btn} alt="Google Play" />
