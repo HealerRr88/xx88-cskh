@@ -50,7 +50,7 @@ export const LINKS = [
   },
   {
     default: "#",
-    mb: "https://www.xx5455.com/",
-    pc: "https://xx88s.com"
+    mb: "https://xx88s.com",
+    pc: "https://www.xx5455.com/"
   },
 ];
