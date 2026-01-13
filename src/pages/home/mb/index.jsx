@@ -16,6 +16,8 @@ import qua_tang_icon from "../../../assets/images/qua-tang-icon.png";
 import huong_dan_icon from "../../../assets/images/huong-dan-icon.png";
 import kenh_su_kien_icon from "../../../assets/images/kenh-su-kien-icon.png";
 import livestream_icon from "../../../assets/images/livestream-icon.png";
+import thuong_hieu_icon from "../../../assets/images/thuong-hieu-icon.png";
+import thien_nguyen_icon from "../../../assets/images/thien-nguyen-icon.png";
 
 import { Link } from "react-router-dom";
 import styles from "./style.module.css";
@@ -30,7 +32,7 @@ import './styles.css';
 import prevIcon from '../../../assets/images/prev-icon.png';
 import nextIcon from '../../../assets/images/next-icon.png';
 import AppDownloadComponent from "../../../components/app_download";
-import { CODE_FREE_URL, DAILY_URL, FACEBOOK_URL, HOTLINE_NUMBER, HUONG_DAN_URL, KENH_SU_KIEN_URL, KHIEU_NAI_URL, KHUYEN_MAI_URL, LIVESTREAM_URL, NAP_TIEN_URL, QUA_TANG_URL, RUT_TIEN_URL, TAI_KHOAN_URL, TELEGRAM_URL } from "../../../utils/config";
+import { CODE_FREE_URL, DAILY_URL, FACEBOOK_URL, HOTLINE_NUMBER, HUONG_DAN_URL, KENH_SU_KIEN_URL, KHIEU_NAI_URL, KHUYEN_MAI_URL, LIVESTREAM_URL, NAP_TIEN_URL, QUA_TANG_URL, RUT_TIEN_URL, TAI_KHOAN_URL, TELEGRAM_URL, THIEN_NGUYEN_URL, THUONG_HIEU_URL } from "../../../utils/config";
 
 export default function MBPage() {
   return (
@@ -125,6 +127,18 @@ export default function MBPage() {
               <Link to={LIVESTREAM_URL} className="d-flex flex-column justify-content-center align-items-center gap-1">
                 <img className={styles.barMenuIcon} src={livestream_icon} alt="Livestream" />
                 <span>Livestream</span>
+              </Link>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Link to={THUONG_HIEU_URL} className="d-flex flex-column justify-content-center align-items-center gap-1">
+                <img className={styles.barMenuIcon} src={thuong_hieu_icon} alt="Thương Hiệu" />
+                <span>Thương Hiệu</span>
+              </Link>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Link to={THIEN_NGUYEN_URL} className="d-flex flex-column justify-content-center align-items-center gap-1">
+                <img className={styles.barMenuIcon} src={thien_nguyen_icon} alt="Thiện Nguyện" />
+                <span>Thiện Nguyện</span>
               </Link>
             </SwiperSlide>
           </Swiper>

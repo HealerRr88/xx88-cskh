@@ -15,6 +15,8 @@ import qua_tang_icon from "../../../assets/images/qua-tang-icon.png";
 import huong_dan_icon from "../../../assets/images/huong-dan-icon.png";
 import kenh_su_kien_icon from "../../../assets/images/kenh-su-kien-icon.png";
 import livestream_icon from "../../../assets/images/livestream-icon.png";
+import thuong_hieu_icon from "../../../assets/images/thuong-hieu-icon.png";
+import thien_nguyen_icon from "../../../assets/images/thien-nguyen-icon.png";
 
 import grid_menu_center_item from "../../../assets/images/grid-menu-center-item.png";
 import homeStyles from "../style.module.css";
@@ -22,7 +24,7 @@ import pcStyles from "./style.module.css";
 import { Link } from "react-router-dom";
 import AppDownloadComponent from "../../../components/app_download";
 import LinksComponent from "../../../components/links";
-import { CODE_FREE_URL, DAILY_URL, FACEBOOK_URL, HOTLINE_NUMBER, HUONG_DAN_URL, KENH_SU_KIEN_URL, KHIEU_NAI_URL, KHUYEN_MAI_URL, LIVESTREAM_URL, NAP_TIEN_URL, QUA_TANG_URL, RUT_TIEN_URL, TAI_KHOAN_URL, TELEGRAM_URL } from "../../../utils/config";
+import { CODE_FREE_URL, DAILY_URL, FACEBOOK_URL, HOTLINE_NUMBER, HUONG_DAN_URL, KENH_SU_KIEN_URL, KHIEU_NAI_URL, KHUYEN_MAI_URL, LIVESTREAM_URL, NAP_TIEN_URL, QUA_TANG_URL, RUT_TIEN_URL, TAI_KHOAN_URL, TELEGRAM_URL, THIEN_NGUYEN_URL, THUONG_HIEU_URL } from "../../../utils/config";
 
 export default function PCPage() {
   return (
@@ -101,6 +103,14 @@ export default function PCPage() {
           <Link to={LIVESTREAM_URL} className="d-flex flex-column justify-content-center align-items-center gap-1">
             <img className={pcStyles.barMenuIcon} src={livestream_icon} alt="Livestream" />
             <span>Livestream</span>
+          </Link>
+          <Link to={THUONG_HIEU_URL} className="d-flex flex-column justify-content-center align-items-center gap-1">
+            <img className={pcStyles.barMenuIcon} src={thuong_hieu_icon} alt="Thương Hiệu" />
+            <span>Thương Hiệu</span>
+          </Link>
+          <Link to={THIEN_NGUYEN_URL} className="d-flex flex-column justify-content-center align-items-center gap-1">
+            <img className={pcStyles.barMenuIcon} src={thien_nguyen_icon} alt="Thiện Nguyện" />
+            <span>Thiện Nguyện</span>
           </Link>
         </div>
       </div>

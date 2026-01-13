@@ -21,6 +21,8 @@ export const QUA_TANG_URL = "https://xx88gift.com/";
 export const HUONG_DAN_URL = "https://xx88note.com/note-book";
 export const KENH_SU_KIEN_URL = "https://t.me/addlist/99-lKL2uuPhlYzY8";
 export const LIVESTREAM_URL = "https://live.kjc20250.com/";
+export const THUONG_HIEU_URL = "#";
+export const THIEN_NGUYEN_URL = "#";
 
 export const LINKS = [
   {
@@ -50,7 +52,7 @@ export const LINKS = [
   },
   {
     default: "#",
-    mb: "https://xx88s.com",
+    mb: "https://xx88s.com/",
     pc: "https://www.xx5455.com/"
   },
 ];

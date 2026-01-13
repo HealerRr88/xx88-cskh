@@ -25,6 +25,8 @@
 
 .barMenuIcon {
   width: 36px;
+  height: 36px;
+  object-fit: cover;
 }
 
 .swiperContainer a {
