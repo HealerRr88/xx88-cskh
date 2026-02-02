@@ -1,7 +1,7 @@
 export const BACK_HOME_URL = "https://rr88_shortlink.rr88tino.workers.dev/xx88link";
 
 export const NAP_TIEN_URL = "https://secure.livechatinc.com/licence/19230099/v2/open_chat.cgi";
-export const RUT_TIEN_URL = "https://secure.livechatinc.com/licence/19230099/v2/open_chat.cgi";
+export const RUT_TIEN_URL = "https://xx88.klivechat.com/widget"; //update 02-02-2026
 export const KHUYEN_MAI_URL = "https://secure.livechatinc.com/licence/19230099/v2/open_chat.cgi";
 export const TAI_KHOAN_URL = "https://secure.livechatinc.com/licence/19230099/v2/open_chat.cgi";
 export const KHIEU_NAI_URL = "https://t.me/XX88KHIEUNAI";
