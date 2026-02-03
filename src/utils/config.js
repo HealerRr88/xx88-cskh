@@ -3,7 +3,7 @@ export const BACK_HOME_URL = "https://rr88_shortlink.rr88tino.workers.dev/xx88li
 export const NAP_TIEN_URL = "https://secure.livechatinc.com/licence/19230099/v2/open_chat.cgi";
 export const RUT_TIEN_URL = "https://secure.livechatinc.com/licence/19230099/v2/open_chat.cgi";
 export const KHUYEN_MAI_URL = "https://secure.livechatinc.com/licence/19230099/v2/open_chat.cgi";
-export const TAI_KHOAN_URL = "https://xx88.klivechat.com/widget";
+export const TAI_KHOAN_URL = "https://secure.livechatinc.com/licence/19230099/v2/open_chat.cgi"; //https://xx88.klivechat.com/widget
 export const KHIEU_NAI_URL = "https://t.me/XX88KHIEUNAI";
 export const TELEGRAM_URL = "https://t.me/BOTCSKHXX88_BOT";
 
@@ -56,3 +56,30 @@ export const LINKS = [
     pc: "https://www.xx5455.com/"
   },
 ];
+
+export const LINK_KEYS = {
+  TRANG_CHU: 'trang-chu',
+  NAP_TIEN: 'nap-tien',
+  RUT_TIEN: 'rut-tien',
+  KHUYEN_MAI: 'khuyen-mai',
+  TAI_KHOAN: 'tai-khoan',
+  KHIEU_NAI: 'khieu-nai',
+  TELEGRAM: 'telegram',
+  IOS_APP_DOWNLOAD: 'ios-app-download',
+  IOS_BUTTON_LINK: 'ios-button-link',
+  ANDROID_APP_DOWNLOAD: 'android-app-download',
+  ANDROID_BUTTON_LINK: 'android-button-link',
+  HOTLINE: 'hotline',
+  ADMIN_EMAIL: 'admin-email',
+  DAI_LY: 'dai-ly',
+  CODE_FREE: 'code-free',
+  FACEBOOK: 'facebook',
+  QUA_TANG: 'qua-tang',
+  HUONG_DAN: 'huong-dan',
+  KENH_SU_KIEN: 'kenh-su-kien',
+  LIVESTREAM: 'livestream',
+  THUONG_HIEU: 'thuong-hieu',
+  THIEN_NGUYEN: 'thien-nguyen',
+
+  PRE_FIX: 'link-'
+}
