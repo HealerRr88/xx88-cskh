@@ -3,26 +3,26 @@ import logo from '../../assets/images/xx88-logo.gif';
 import phoneIcon from '../../assets/images/phone-icon.png';
 import emailIcon from '../../assets/images/email-icon.png';
 import styles from './style.module.css';
-import { BACK_HOME_URL } from '../../utils/config';
+import { BACK_HOME_URL, LINK_KEYS } from '../../utils/config';
 import { isMobile } from 'react-device-detect';
 
-export default function HeaderComponent() {
+export default function HeaderComponent({ links }) {
   return (
     <>
       <div className='bg-white'>
         <div className="container d-flex justify-content-between align-items-center">
           <div className='col-md-3 col-5'>
-            <Link to={BACK_HOME_URL}>
+            <Link to={links.find(x => x.key === LINK_KEYS.TRANG_CHU)?.url || BACK_HOME_URL}>
               <img className={`w-100 ${styles.logo}`} src={logo} alt="XX88 Logo" />
             </Link>
           </div>
-          <Link to={BACK_HOME_URL} className={`d-flex align-items-center justify-content-center ${styles.homeBtn}`}>TRANG CHỦ</Link>
+          <Link to={links.find(x => x.key === LINK_KEYS.TRANG_CHU)?.url || BACK_HOME_URL} className={`d-flex align-items-center justify-content-center ${styles.homeBtn}`}>TRANG CHỦ</Link>
         </div>
-      </div>
+      </div >
 
       {
         isMobile ? (
-          <div className={`mt-3 ${styles.title}`}>TRUNG TÂM <br /> DỊCH VỤ KHÁCH HÀNG</div>
+          <div className={`mt-3 ${styles.title}`} > TRUNG TÂM < br /> DỊCH VỤ KHÁCH HÀNG</div >
         ) : (
           <div className={`mt-3 ${styles.title}`}>TRUNG TÂM DỊCH VỤ KHÁCH HÀNG</div>
         )
@@ -32,11 +32,11 @@ export default function HeaderComponent() {
         <div className={`d-flex align-items-center justify-content-center px-md-5 px-3 py-md-3 py-1 gap-4 ${styles.phoneAndEmail}`}>
           <div className='d-flex align-items-center gap-1'>
             <img src={phoneIcon} className={styles.icon} alt="Phone Icon" />
-            <span>+84 567880999</span>
+            <span>{links.find(x => x.key === LINK_KEYS.HOTLINE)?.url || '+84 567880999'} </span>
           </div>
           <div className='d-flex align-items-center gap-1'>
             <img src={emailIcon} className={styles.icon} alt="Email Icon" />
-            <span>admin@xx88.com</span>
+            <span>{links.find(x => x.key === LINK_KEYS.ADMIN_EMAIL)?.url || 'admin@xx88.com'}</span>
           </div>
         </div>
       </div>

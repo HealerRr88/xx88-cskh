@@ -32,35 +32,38 @@ import './styles.css';
 import prevIcon from '../../../assets/images/prev-icon.png';
 import nextIcon from '../../../assets/images/next-icon.png';
 import AppDownloadComponent from "../../../components/app_download";
-import { CODE_FREE_URL, DAILY_URL, FACEBOOK_URL, HOTLINE_NUMBER, HUONG_DAN_URL, KENH_SU_KIEN_URL, KHIEU_NAI_URL, KHUYEN_MAI_URL, LIVESTREAM_URL, NAP_TIEN_URL, QUA_TANG_URL, RUT_TIEN_URL, TAI_KHOAN_URL, TELEGRAM_URL, THIEN_NGUYEN_URL, THUONG_HIEU_URL } from "../../../utils/config";
+import { CODE_FREE_URL, DAILY_URL, FACEBOOK_URL, HOTLINE_NUMBER, HUONG_DAN_URL, KENH_SU_KIEN_URL, KHIEU_NAI_URL, KHUYEN_MAI_URL, LINK_KEYS, LIVESTREAM_URL, NAP_TIEN_URL, QUA_TANG_URL, RUT_TIEN_URL, TAI_KHOAN_URL, TELEGRAM_URL, THIEN_NGUYEN_URL, THUONG_HIEU_URL } from "../../../utils/config";
 
-export default function MBPage() {
+export default function MBPage({ links }) {
+
   return (
     <div className="pb-5">
-      <HeaderComponent />
+      <HeaderComponent
+        links={links}
+      />
 
       <div className="container d-flex flex-wrap gap-2 justify-content-center align-items-center mt-3">
-        <Link to={NAP_TIEN_URL} className={`flex-fill d-flex flex-column justify-content-center align-items-center gap-1 px-3 py-2 ${styles.gridMenuItem}`}>
+        <Link to={links.find(x => x.key === LINK_KEYS.NAP_TIEN)?.url || NAP_TIEN_URL} className={`flex-fill d-flex flex-column justify-content-center align-items-center gap-1 px-3 py-2 ${styles.gridMenuItem}`}>
           <img className={styles.gridMenuItemIcon} src={nap_tien_icon} alt="Nạp tiền" />
           <span>NẠP TIỀN</span>
         </Link>
-        <Link to={RUT_TIEN_URL} className={`flex-fill d-flex flex-column justify-content-center align-items-center gap-1 px-3 py-2 ${styles.gridMenuItem}`}>
+        <Link to={links.find(x => x.key === LINK_KEYS.RUT_TIEN)?.url || RUT_TIEN_URL} className={`flex-fill d-flex flex-column justify-content-center align-items-center gap-1 px-3 py-2 ${styles.gridMenuItem}`}>
           <img className={styles.gridMenuItemIcon} src={rut_tien_icon} alt="Rút tiền" />
           <span>RÚT TIỀN</span>
         </Link>
-        <Link to={KHUYEN_MAI_URL} className={`flex-fill d-flex flex-column justify-content-center align-items-center gap-1 px-3 py-2 ${styles.gridMenuItem}`}>
+        <Link to={links.find(x => x.key === LINK_KEYS.KHUYEN_MAI)?.url || KHUYEN_MAI_URL} className={`flex-fill d-flex flex-column justify-content-center align-items-center gap-1 px-3 py-2 ${styles.gridMenuItem}`}>
           <img className={styles.gridMenuItemIcon} src={khuyen_mai_icon} alt="Khuyến mãi" />
           <span>KHUYẾN MÃI</span>
         </Link>
-        <Link to={TAI_KHOAN_URL} className={`flex-fill d-flex flex-column justify-content-center align-items-center gap-1 px-3 py-2 ${styles.gridMenuItem}`}>
+        <Link to={links.find(x => x.key === LINK_KEYS.TAI_KHOAN)?.url || TAI_KHOAN_URL} className={`flex-fill d-flex flex-column justify-content-center align-items-center gap-1 px-3 py-2 ${styles.gridMenuItem}`}>
           <img className={styles.gridMenuItemIcon} src={tai_khoan_icon} alt="Tài khoản" />
           <span>TÀI KHOẢN</span>
         </Link>
-        <Link to={KHIEU_NAI_URL} className={`flex-fill d-flex flex-column justify-content-center align-items-center gap-1 px-3 py-2 ${styles.gridMenuItem}`}>
+        <Link to={links.find(x => x.key === LINK_KEYS.KHIEU_NAI)?.url || KHIEU_NAI_URL} className={`flex-fill d-flex flex-column justify-content-center align-items-center gap-1 px-3 py-2 ${styles.gridMenuItem}`}>
           <img className={styles.gridMenuItemIcon} src={khieu_nai_icon} alt="Khiếu nại" />
           <span>KHIẾU NẠI</span>
         </Link>
-        <Link to={TELEGRAM_URL} className={`flex-fill d-flex flex-column justify-content-center align-items-center gap-1 px-3 py-2 ${styles.gridMenuItem}`}>
+        <Link to={links.find(x => x.key === LINK_KEYS.TELEGRAM)?.url || TELEGRAM_URL} className={`flex-fill d-flex flex-column justify-content-center align-items-center gap-1 px-3 py-2 ${styles.gridMenuItem}`}>
           <img className={styles.gridMenuItemIcon} src={telegram_icon} alt="Telegram" />
           <span>TELEGRAM</span>
         </Link>
@@ -82,61 +85,61 @@ export default function MBPage() {
             onSwiper={(swiper) => { }}
           >
             <SwiperSlide>
-              <Link to={`tel:${HOTLINE_NUMBER}`} className="d-flex flex-column justify-content-center align-items-center gap-1">
+              <Link to={`tel:${links.find(x => x.key === LINK_KEYS.HOTLINE)?.url || HOTLINE_NUMBER}`} className="d-flex flex-column justify-content-center align-items-center gap-1">
                 <img className={styles.barMenuIcon} src={hotline_icon} alt="Hotline" />
                 <span>Hotline</span>
               </Link>
             </SwiperSlide>
             <SwiperSlide>
-              <Link to={DAILY_URL} className="d-flex flex-column justify-content-center align-items-center gap-1">
+              <Link to={links.find(x => x.key === LINK_KEYS.DAI_LY)?.url || DAILY_URL} className="d-flex flex-column justify-content-center align-items-center gap-1">
                 <img className={styles.barMenuIcon} src={dai_ly_icon} alt="Đại lý" />
                 <span>Đại lý</span>
               </Link>
             </SwiperSlide>
             <SwiperSlide>
-              <Link to={CODE_FREE_URL} className="d-flex flex-column justify-content-center align-items-center gap-1">
+              <Link to={links.find(x => x.key === LINK_KEYS.CODE_FREE)?.url || CODE_FREE_URL} className="d-flex flex-column justify-content-center align-items-center gap-1">
                 <img className={styles.barMenuIcon} src={code_free_icon} alt="Code Free" />
                 <span>Code Free</span>
               </Link>
             </SwiperSlide>
             <SwiperSlide>
-              <Link to={FACEBOOK_URL} className="d-flex flex-column justify-content-center align-items-center gap-1">
+              <Link to={links.find(x => x.key === LINK_KEYS.FACEBOOK)?.url || FACEBOOK_URL} className="d-flex flex-column justify-content-center align-items-center gap-1">
                 <img className={styles.barMenuIcon} src={facebook_icon} alt="Facebook" />
                 <span>Facebook</span>
               </Link>
             </SwiperSlide>
             <SwiperSlide>
-              <Link to={QUA_TANG_URL} className="d-flex flex-column justify-content-center align-items-center gap-1">
+              <Link to={links.find(x => x.key === LINK_KEYS.QUA_TANG)?.url || QUA_TANG_URL} className="d-flex flex-column justify-content-center align-items-center gap-1">
                 <img className={styles.barMenuIcon} src={qua_tang_icon} alt="Quà tặng" />
                 <span>Quà tặng</span>
               </Link>
             </SwiperSlide>
             <SwiperSlide>
-              <Link to={HUONG_DAN_URL} className="d-flex flex-column justify-content-center align-items-center gap-1">
+              <Link to={links.find(x => x.key === LINK_KEYS.HUONG_DAN)?.url || HUONG_DAN_URL} className="d-flex flex-column justify-content-center align-items-center gap-1">
                 <img className={styles.barMenuIcon} src={huong_dan_icon} alt="Hướng dẫn" />
                 <span>Hướng dẫn</span>
               </Link>
             </SwiperSlide>
             <SwiperSlide>
-              <Link to={KENH_SU_KIEN_URL} className="d-flex flex-column justify-content-center align-items-center gap-1">
+              <Link to={links.find(x => x.key === LINK_KEYS.KENH_SU_KIEN)?.url || KENH_SU_KIEN_URL} className="d-flex flex-column justify-content-center align-items-center gap-1">
                 <img className={styles.barMenuIcon} src={kenh_su_kien_icon} alt="Kênh sự kiện" />
                 <span>Kênh sự kiện</span>
               </Link>
             </SwiperSlide>
             <SwiperSlide>
-              <Link to={LIVESTREAM_URL} className="d-flex flex-column justify-content-center align-items-center gap-1">
+              <Link to={links.find(x => x.key === LINK_KEYS.LIVESTREAM)?.url || LIVESTREAM_URL} className="d-flex flex-column justify-content-center align-items-center gap-1">
                 <img className={styles.barMenuIcon} src={livestream_icon} alt="Livestream" />
                 <span>Livestream</span>
               </Link>
             </SwiperSlide>
             <SwiperSlide>
-              <Link to={THUONG_HIEU_URL} className="d-flex flex-column justify-content-center align-items-center gap-1">
+              <Link to={links.find(x => x.key === LINK_KEYS.THUONG_HIEU)?.url || THUONG_HIEU_URL} className="d-flex flex-column justify-content-center align-items-center gap-1">
                 <img className={styles.barMenuIcon} src={thuong_hieu_icon} alt="Thương Hiệu" />
                 <span>Thương Hiệu</span>
               </Link>
             </SwiperSlide>
             <SwiperSlide>
-              <Link to={THIEN_NGUYEN_URL} className="d-flex flex-column justify-content-center align-items-center gap-1">
+              <Link to={links.find(x => x.key === LINK_KEYS.THIEN_NGUYEN)?.url || THIEN_NGUYEN_URL} className="d-flex flex-column justify-content-center align-items-center gap-1">
                 <img className={styles.barMenuIcon} src={thien_nguyen_icon} alt="Thiện Nguyện" />
                 <span>Thiện Nguyện</span>
               </Link>
@@ -158,13 +161,17 @@ export default function MBPage() {
       </div>
 
 
-      <LinksComponent />
+      <LinksComponent
+        links={links}
+      />
 
       <div className="container mt-3">
         <img className="w-100" src={grid_menu_center_item} alt="grid_menu_center_item" />
       </div>
 
-      <AppDownloadComponent />
+      <AppDownloadComponent
+        links={links}
+      />
     </div>
   );
 }

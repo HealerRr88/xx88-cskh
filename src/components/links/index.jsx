@@ -5,7 +5,7 @@ import LinkItemComponent from "./item";
 import { isMobile } from "react-device-detect";
 import { LINKS } from "../../utils/config";
 
-export default function LinksComponent() {
+export default function LinksComponent({ links }) {
 
   return (
     <div className="container mt-md-5 mt-3">
@@ -20,15 +20,39 @@ export default function LinksComponent() {
       </div>
       <div className={`d-flex flex-wrap mt-md-4 mt-3 ${isMobile ? 'gap-2' : 'gap-3'}`}>
         {
-          LINKS.map((link, index) => (
-            <LinkItemComponent
-              key={index}
-              index={index + 1}
-              mbUrl={link.mb}
-              pcUrl={link.pc}
-              url={link.default}
-            />
-          ))
+          links && links.length > 0 ? (
+            isMobile ? (
+              links.filter(x => x.device === 2).map((link, index) => (
+                <LinkItemComponent
+                  key={index}
+                  index={index + 1}
+                  mbUrl={link.url}
+                  pcUrl={link.url}
+                  url={link.url}
+                />
+              ))
+            ) : (
+              links.filter(x => x.device === 1).map((link, index) => (
+                <LinkItemComponent
+                  key={index}
+                  index={index + 1}
+                  mbUrl={link.url}
+                  pcUrl={link.url}
+                  url={link.url}
+                />
+              ))
+            )
+          ) : ( // Không có links truyền vào, sử dụng LINKS mặc định
+            LINKS.map((link, index) => (
+              <LinkItemComponent
+                key={index}
+                index={index + 1}
+                mbUrl={link.mb}
+                pcUrl={link.pc}
+                url={link.default}
+              />
+            ))
+          )
         }
       </div>
     </div>
