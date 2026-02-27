@@ -5,6 +5,7 @@ import emailIcon from '../../assets/images/email-icon.png';
 import styles from './style.module.css';
 import { BACK_HOME_URL, LINK_KEYS } from '../../utils/config';
 import { isMobile } from 'react-device-detect';
+import { getLinkByKey } from '../../utils/functions';
 
 export default function HeaderComponent({ links }) {
   return (
@@ -12,11 +13,22 @@ export default function HeaderComponent({ links }) {
       <div className='bg-white'>
         <div className="container d-flex justify-content-between align-items-center">
           <div className='col-md-3 col-5'>
-            <Link to={links.find(x => x.key === LINK_KEYS.TRANG_CHU)?.url || BACK_HOME_URL}>
+            <Link
+              to={
+                getLinkByKey(links, LINK_KEYS.TRANG_CHU, isMobile) || BACK_HOME_URL
+              }
+            >
               <img className={`w-100 ${styles.logo}`} src={logo} alt="XX88 Logo" />
             </Link>
           </div>
-          <Link to={links.find(x => x.key === LINK_KEYS.TRANG_CHU)?.url || BACK_HOME_URL} className={`d-flex align-items-center justify-content-center ${styles.homeBtn}`}>TRANG CHỦ</Link>
+          <Link
+            to={
+              getLinkByKey(links, LINK_KEYS.TRANG_CHU, isMobile) || BACK_HOME_URL
+            }
+            className={`d-flex align-items-center justify-content-center ${styles.homeBtn}`}
+          >
+            TRANG CHỦ
+          </Link>
         </div>
       </div >
 

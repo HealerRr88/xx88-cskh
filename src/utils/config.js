@@ -60,7 +60,11 @@ export const LINKS = [
 ];
 
 export const LINK_KEYS = {
-  TRANG_CHU: 'trang-chu',
+  TRANG_CHU: {
+    default: 'trang-chu',
+    mb: 'trang-chu-mb',
+    pc: 'trang-chu-pc'
+  },
   NAP_TIEN: 'nap-tien',
   RUT_TIEN: 'rut-tien',
   KHUYEN_MAI: 'khuyen-mai',
