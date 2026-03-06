@@ -162,7 +162,9 @@ export default function MBPage({ links }) {
 
 
       <LinksComponent
-        links={links}
+        links={
+          links.filter(x => x.key.startsWith(LINK_KEYS.PRE_FIX))
+        }
       />
 
       <div className="container mt-3">
