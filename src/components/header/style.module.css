@@ -36,6 +36,47 @@
   min-height: 50px;
 }
 
+.warning {
+  color: #00AEEF;
+  font-size: 32px;
+  font-weight: 800;
+  animation: glow-blink 1.2s infinite;
+}
+
+@keyframes glow-blink {
+
+  0%,
+  100% {
+    text-shadow:
+      0 0 5px #1bb9f38f,
+      0 0 15px #1bb9f38f,
+      0 0 30px #1bb9f38f;
+    opacity: 1;
+  }
+
+  50% {
+    text-shadow: none;
+    opacity: 0.9;
+  }
+}
+
+@keyframes glow-blink-mb {
+
+  0%,
+  100% {
+    text-shadow:
+      0 0 3px #1bb9f38f,
+      0 0 8px #1bb9f38f,
+      0 0 12px #1bb9f38f;
+    opacity: 1;
+  }
+
+  50% {
+    text-shadow: none;
+    opacity: 0.9;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .homeBtn {
     width: 100px;
@@ -55,5 +96,10 @@
     min-height: 35px;
     max-width: 80%;
     font-size: 11px;
+  }
+
+  .warning {
+    font-size: 16px;
+    animation: glow-blink-mb 1.2s infinite;
   }
 }

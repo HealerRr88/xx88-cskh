@@ -34,7 +34,7 @@ export default function HeaderComponent({ links }) {
 
       {
         isMobile ? (
-          <div className={`mt-3 ${styles.title}`} > TRUNG TÂM < br /> DỊCH VỤ KHÁCH HÀNG</div >
+          <div className={`mt-3 ${styles.title}`} > TRUNG TÂM DỊCH VỤ < br /> KHÁCH HÀNG</div >
         ) : (
           <div className={`mt-3 ${styles.title}`}>TRUNG TÂM DỊCH VỤ KHÁCH HÀNG</div>
         )
@@ -51,6 +51,11 @@ export default function HeaderComponent({ links }) {
             <span>{links.find(x => x.key === LINK_KEYS.ADMIN_EMAIL)?.url || 'admin@xx88.com'}</span>
           </div>
         </div>
+      </div>
+
+      <div className={`text-center mt-md-4 mt-3 ${styles.warning}`}>
+        CẢNH GIÁC LỪA ĐẢO! KHÔNG LẤY THÔNG TIN <br />
+        NẠP TIỀN QUA NGƯỜI THỨ 3
       </div>
 
     </>
