@@ -12,7 +12,7 @@ import hotline_icon from "../../../assets/images/hotline-icon.png";
 import dai_ly_icon from "../../../assets/images/dai-ly-icon.png";
 import code_free_icon from "../../../assets/images/code-free-icon.png";
 import facebook_icon from "../../../assets/images/facebook-icon.png";
-import qua_tang_icon from "../../../assets/images/qua-tang-icon.gif";
+import qua_tang_icon from "../../../assets/images/qua-tang-icon.png";
 import huong_dan_icon from "../../../assets/images/huong-dan-icon.png";
 import kenh_su_kien_icon from "../../../assets/images/kenh-su-kien-icon.png";
 import livestream_icon from "../../../assets/images/livestream-icon.png";

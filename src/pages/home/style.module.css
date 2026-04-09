@@ -9,3 +9,25 @@
   font-size: 16px;
   color: #00AEEF;
 }
+
+.megaliveImg {
+  width: 200px;
+}
+
+.megaliveCloseIcon svg {
+  width: 24px;
+  height: 24px;
+}
+
+@media screen and (max-width: 768px) {
+
+  .megaliveImg {
+    width: 100px;
+  }
+
+  .megaliveCloseIcon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+}
