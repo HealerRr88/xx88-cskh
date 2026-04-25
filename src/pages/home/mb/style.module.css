@@ -32,3 +32,8 @@
 .swiperContainer a {
   color: #00AEEF;
 }
+
+.closeButton {
+  width: 20px;
+  height: 20px;
+}

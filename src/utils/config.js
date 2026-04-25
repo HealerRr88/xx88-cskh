@@ -1,4 +1,12 @@
+export const ROOT_API_URL = process.env.REACT_APP_ROOT_API_URL || 'http://localhost:1234';
 export const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:1234/api';
+
+export const DEVICES = {
+  ALL: 0,
+  DESKTOP: 1,
+  MOBILE: 2
+};
+
 
 export const BACK_HOME_URL = "https://rr88_shortlink.rr88tino.workers.dev/xx88link";
 
@@ -89,3 +97,8 @@ export const LINK_KEYS = {
 
   PRE_FIX: 'link-'
 }
+
+export const DEFAULT_LINKS = [
+
+
+]
