@@ -1,5 +1,6 @@
-export const ROOT_API_URL = process.env.REACT_APP_ROOT_API_URL || 'http://localhost:1234';
-export const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:1234/api';
+export const API_URL = process.env.REACT_APP_API_URL;
+export const CF_WORKER_API_URL = process.env.REACT_APP_CF_WORKER_API_URL;
+export const R2_BUCKET_URL = process.env.REACT_APP_R2_BUCKET_URL;
 
 export const DEVICES = {
   ALL: 0,

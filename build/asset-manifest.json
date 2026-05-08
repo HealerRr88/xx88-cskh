@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.d830ebc2.css",
-    "main.js": "/static/js/main.e05f03c8.js",
-    "static/css/218.af48e136.chunk.css": "/static/css/218.af48e136.chunk.css",
-    "static/js/218.1ff7884c.chunk.js": "/static/js/218.1ff7884c.chunk.js",
+    "main.js": "/static/js/main.34dc040d.js",
+    "static/css/808.24078e0a.chunk.css": "/static/css/808.24078e0a.chunk.css",
+    "static/js/808.abd93766.chunk.js": "/static/js/808.abd93766.chunk.js",
     "static/js/956.fc9f7e62.chunk.js": "/static/js/956.fc9f7e62.chunk.js",
     "static/js/578.50e699c9.chunk.js": "/static/js/578.50e699c9.chunk.js",
     "static/media/grid-menu-center-item.png": "/static/media/grid-menu-center-item.497dfcd6ba444e3484ed.png",
@@ -25,14 +25,14 @@
     "static/media/bg-phone-email-btn.png": "/static/media/bg-phone-email-btn.0982cd9f35f2df693a59.png",
     "index.html": "/index.html",
     "main.d830ebc2.css.map": "/static/css/main.d830ebc2.css.map",
-    "main.e05f03c8.js.map": "/static/js/main.e05f03c8.js.map",
-    "218.af48e136.chunk.css.map": "/static/css/218.af48e136.chunk.css.map",
-    "218.1ff7884c.chunk.js.map": "/static/js/218.1ff7884c.chunk.js.map",
+    "main.34dc040d.js.map": "/static/js/main.34dc040d.js.map",
+    "808.24078e0a.chunk.css.map": "/static/css/808.24078e0a.chunk.css.map",
+    "808.abd93766.chunk.js.map": "/static/js/808.abd93766.chunk.js.map",
     "956.fc9f7e62.chunk.js.map": "/static/js/956.fc9f7e62.chunk.js.map",
     "578.50e699c9.chunk.js.map": "/static/js/578.50e699c9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d830ebc2.css",
-    "static/js/main.e05f03c8.js"
+    "static/js/main.34dc040d.js"
   ]
 }

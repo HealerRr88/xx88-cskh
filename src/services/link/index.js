@@ -1,21 +1,17 @@
 import * as apiUrls from "../api_url";
+import { get } from "../api_helpers";
 
 export default class LinkService {
   async getAll() {
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 5000);
-
     try {
-      const response = await fetch(
+      return await get(
         apiUrls.LINKS_GET_ALL,
+        apiUrls.LINKS_GET_ALL_WORKER,
         {
-          method: 'GET',
-          signal: controller.signal,
-        });
-      clearTimeout(timeoutId);
-      return response.json();
+          'Content-Type': 'application/json',
+        }
+      );
     } catch (error) {
-      clearTimeout(timeoutId);
       throw error;
     }
   }

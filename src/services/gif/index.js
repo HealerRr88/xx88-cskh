@@ -1,22 +1,19 @@
 import * as apiUrls from "../api_url";
+import { get } from "../api_helpers";
 
 export default class GifService {
 
   async getAll() {
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 5000);
-
     try {
-      const response = await fetch(
+      return await get(
         apiUrls.GIFS_GET_ALL,
+        apiUrls.GIFS_GET_ALL_WORKER,
         {
-          method: 'GET',
-          signal: controller.signal,
-        });
-      clearTimeout(timeoutId);
-      return response.json();
-    } catch (error) {
-      clearTimeout(timeoutId);
+          'Content-Type': 'application/json',
+        }
+      );
+    }
+    catch (error) {
       throw error;
     }
   }
