@@ -1,63 +1,35 @@
 import { Link } from 'react-router-dom';
-import logo from '../../assets/images/xx88-logo.gif';
-import phoneIcon from '../../assets/images/phone-icon.png';
-import emailIcon from '../../assets/images/email-icon.png';
+import logo from '../../assets/images/logo.png';
 import styles from './style.module.css';
-import { BACK_HOME_URL, LINK_KEYS } from '../../utils/config';
 import { isMobile } from 'react-device-detect';
 import { getLinkByKey } from '../../utils/functions';
+import { LINK_KEYS } from '../../utils/config';
+import home_btn from '../../assets/images/home-btn.png';
 
 export default function HeaderComponent({ links }) {
   return (
-    <>
-      <div className='bg-white'>
-        <div className="container d-flex justify-content-between align-items-center">
-          <div className='col-md-3 col-5'>
-            <Link
-              to={
-                getLinkByKey(links, LINK_KEYS.TRANG_CHU, isMobile) || BACK_HOME_URL
-              }
-            >
-              <img className={`w-100 ${styles.logo}`} src={logo} alt="XX88 Logo" />
-            </Link>
-          </div>
+    <div className={`w-100 bg-white sticky-top z-3 ${styles.headerContainer}`}>
+      <div className="d-flex justify-content-between align-items-center">
+        <div className={`col-md-1 col-4`}>
           <Link
             to={
-              getLinkByKey(links, LINK_KEYS.TRANG_CHU, isMobile) || BACK_HOME_URL
+              getLinkByKey(links, LINK_KEYS.TRANG_CHU, isMobile)
             }
-            className={`d-flex align-items-center justify-content-center ${styles.homeBtn}`}
           >
-            TRANG CHỦ
+            <img className={`w-100 ${styles.logo}`} src={logo} alt="XX88 Logo" />
           </Link>
         </div>
-      </div >
-
-      {
-        isMobile ? (
-          <div className={`mt-3 ${styles.title}`} > TRUNG TÂM DỊCH VỤ < br /> KHÁCH HÀNG</div >
-        ) : (
-          <div className={`mt-3 ${styles.title}`}>TRUNG TÂM DỊCH VỤ KHÁCH HÀNG</div>
-        )
-      }
-
-      <div className={`w-100 d-flex align-items-center justify-content-center mt-3`}>
-        <div className={`d-flex align-items-center justify-content-center px-md-5 px-3 py-md-3 py-1 gap-4 ${styles.phoneAndEmail}`}>
-          <div className='d-flex align-items-center gap-1'>
-            <img src={phoneIcon} className={styles.icon} alt="Phone Icon" />
-            <span>{links.find(x => x.key === LINK_KEYS.HOTLINE)?.url || '+84 567880999'} </span>
-          </div>
-          <div className='d-flex align-items-center gap-1'>
-            <img src={emailIcon} className={styles.icon} alt="Email Icon" />
-            <span>{links.find(x => x.key === LINK_KEYS.ADMIN_EMAIL)?.url || 'admin@xx88.com'}</span>
-          </div>
+        <div className={`col-md-1 col-3 d-flex justify-content-end`}>
+          <Link
+            to={
+              getLinkByKey(links, LINK_KEYS.TRANG_CHU, isMobile)
+            }
+          >
+            <img className={`w-100 ${styles.homeBtn}`} src={home_btn} alt="home_btn" />
+          </Link>
         </div>
       </div>
+    </div>
 
-      <div className={`text-center mt-md-4 mt-3 ${styles.warning}`}>
-        CẢNH GIÁC LỪA ĐẢO! KHÔNG LẤY THÔNG TIN <br />
-        NẠP TIỀN QUA NGƯỜI THỨ 3
-      </div>
-
-    </>
   );
 }

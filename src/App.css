@@ -1,8 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap');
+@font-face {
+  font-family: 'SF-Pro-Display';
+  src: url('./assets/fonts/SF-Pro-Display-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF-Pro-Display';
+  src: url('./assets/fonts/SF-Pro-Display-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF-Pro-Display';
+  src: url('./assets/fonts/SF-Pro-Display-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
 
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #effbff;
+  background-image: url('./assets/images/bg.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 a {
@@ -11,4 +33,11 @@ a {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background-image: url('./assets/images/bg-mb.png');
+    background-position: top;
+  }
 }

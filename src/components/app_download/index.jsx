@@ -1,39 +1,49 @@
-import ios_qr from "../../assets/images/ios-qr.png";
-import android_qr from "../../assets/images/android-qr.png";
-import appstore_btn from "../../assets/images/appstore-btn.png";
-import googleplay_btn from "../../assets/images/googleplay-btn.png";
 import { Link } from "react-router-dom";
 import styles from "./style.module.css";
-import { ANDROID_APP_URL, ANDROID_DOWNLOAD_BTN_URL, IOS_APP_URL, IOS_DOWNLOAD_BTN_URL, LINK_KEYS } from "../../utils/config";
+import app_download_bg from "../../assets/images/app-download-bg.png";
+import ios_qr from "../../assets/images/ios-qr.png";
+import android_qr from "../../assets/images/android-qr.png";
+import app_store from "../../assets/images/app-store.png";
+import google_play from "../../assets/images/google-play.png";
+import btn_download_bg from "../../assets/images/btn-download-bg.png";
+import { getLinkByKey } from "../../utils/functions";
+import { LINK_KEYS } from "../../utils/config";
 
 export default function AppDownloadComponent({ links }) {
   return (
-    <div className="container d-flex justify-content-center mt-md-4 mt-3">
-      <div className="col-md-6 col-12 d-flex">
-        <div className="col-6 pe-2 d-flex">
-          <div className="col-5">
-            <img className="w-100" src={ios_qr} alt="ios_qr" />
+    <div className="position-relative">
+      <img className={`w-100`} src={app_download_bg} alt="app_download_bg" />
+      <div className={`position-absolute bottom-0 start-0 w-100 d-flex align-items-end justify-content-center ${styles.appDownloadContainer}`}>
+        <div className="col-6 d-flex align-items-center justify-content-center pe-md-3 pe-2">
+          <div className="col-6 text-start">
+            <img className="col-10" src={ios_qr} alt="ios_qr" />
           </div>
-          <div className="ms-md-3 ms-2 flex-fill d-flex flex-column align-items-center justify-content-center">
-            <Link to={links.find(x => x.key === LINK_KEYS.IOS_BUTTON_LINK)?.url || IOS_DOWNLOAD_BTN_URL} className={`w-100 d-flex justify-content-center align-items-center ${styles.downloadBtn}`}>TẢI XUỐNG</Link>
-            <div className="mt-md-3 mt-1">
-              <Link to={links.find(x => x.key === LINK_KEYS.IOS_APP_DOWNLOAD)?.url || IOS_APP_URL}>
-                <img className="w-100" src={appstore_btn} alt="App Store Button" />
-              </Link>
-            </div>
+          <div className="col-6 d-flex flex-column align-items-center justify-content-center">
+            <Link to={getLinkByKey(links, LINK_KEYS.APP_IOS_BTN)} className="d-block position-relative">
+              <img className="w-100" src={btn_download_bg} alt="btn_download_bg" />
+              <div className={`position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center text-white ${styles.appDownloadBtn}`}>
+                TẢI XUỐNG
+              </div>
+            </Link>
+            <Link to={getLinkByKey(links, LINK_KEYS.APP_IOS_LINK)} className="d-block position-relative mt-md-2 mt-1">
+              <img className="w-100" src={app_store} alt="app_store" />
+            </Link>
           </div>
         </div>
-        <div className="ms-md-4 ms-1 col-6 ps-2 d-flex">
-          <div className="col-5">
-            <img className="w-100" src={android_qr} alt="android_qr" />
+        <div className="col-6 d-flex align-items-center justify-content-center ps-md-3 ps-2">
+          <div className="col-6 text-start">
+            <img className="col-10" src={android_qr} alt="ios_qr" />
           </div>
-          <div className="ms-md-3 ms-2 flex-fill d-flex flex-column align-items-center justify-content-center">
-            <Link to={links.find(x => x.key === LINK_KEYS.ANDROID_BUTTON_LINK)?.url || ANDROID_DOWNLOAD_BTN_URL} className={`w-100 d-flex justify-content-center align-items-center ${styles.downloadBtn}`}>TẢI XUỐNG</Link>
-            <div className="mt-md-3 mt-1">
-              <Link to={links.find(x => x.key === LINK_KEYS.ANDROID_APP_DOWNLOAD)?.url || ANDROID_APP_URL}>
-                <img className="w-100" src={googleplay_btn} alt="Google Play" />
-              </Link>
-            </div>
+          <div className="col-6 d-flex flex-column align-items-center justify-content-center">
+            <Link to={getLinkByKey(links, LINK_KEYS.APP_ANDROID_BTN)} className="d-block position-relative">
+              <img className="w-100" src={btn_download_bg} alt="btn_download_bg" />
+              <div className={`position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center text-white ${styles.appDownloadBtn}`}>
+                TẢI XUỐNG
+              </div>
+            </Link>
+            <Link to={getLinkByKey(links, LINK_KEYS.APP_ANDROID_LINK)} className="d-block position-relative mt-md-2 mt-1">
+              <img className="w-100" src={google_play} alt="google_play" />
+            </Link>
           </div>
         </div>
       </div>

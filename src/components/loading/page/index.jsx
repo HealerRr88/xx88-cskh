@@ -1,4 +1,4 @@
-import loadingIcon from '../../../assets/images/xx88-logo.gif';
+import loadingIcon from '../../../assets/images/logo.gif';
 
 export default function PageLoading() {
   return (

@@ -1,12 +1,9 @@
-.title {
-  font-weight: 900;
-  font-size: 33px;
-  text-align: center;
-  color: #00AEEF;
+.linksContainer {
+  padding: 3.5% 3.5% 0 3.5%;
 }
 
 @media screen and (max-width: 768px) {
-  .title {
-    font-size: 16px;
+  .linksContainer {
+    padding: 8% 3.5% 2% 3.5%;
   }
 }

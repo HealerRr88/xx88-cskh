@@ -1,39 +1,23 @@
-.gridMenuItem {
-  background: rgba(138, 197, 218, 0.3);
-  border: 1px solid #00AEEF;
-  border-radius: 10px;
-  font-weight: 900;
-  font-size: 12px;
-  color: #00AEEF;
-  width: calc(100% / 3 - 8px);
-}
-
-.gridMenuItemIcon {
-  width: 40px;
-}
-
-.swiperContainer {
-  background: rgba(138, 197, 218, 0.3);
-  border: 1px solid #00AEEF;
-  border-radius: 16px;
-  font-size: 10px;
-
-  font-weight: 900;
-  text-align: center;
-  color: #00AEEF;
-}
-
-.barMenuIcon {
-  width: 36px;
-  height: 36px;
-  object-fit: cover;
-}
-
-.swiperContainer a {
-  color: #00AEEF;
-}
-
 .closeButton {
   width: 20px;
   height: 20px;
+}
+
+.phoneNumber,
+.email {
+  font-family: 'SF-Pro-Display', sans-serif;
+  font-weight: 600;
+  color: #00112B;
+  font-size: 3.5vw;
+}
+
+.fastlyAccessTitle {
+  font-weight: 510;
+  font-size: 14px;
+  color: rgba(0, 17, 43, 0.4);
+}
+
+.fastlyAccessTitleDecor {
+  background-color: rgba(0, 17, 43, 0.08);
+  height: 1px;
 }

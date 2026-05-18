@@ -42,3 +42,7 @@ export const buildFileUrl = (baseUrl, path) => {
   const normalizedPath = String(path || "").replace(/^\/+/, "");
   return `${normalizedBaseUrl}/${normalizedPath}`;
 };
+
+export const randomInterger = (min, max) => {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}

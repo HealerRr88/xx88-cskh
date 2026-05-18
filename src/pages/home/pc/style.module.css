@@ -1,22 +1,72 @@
-.barMenu {
-  background: rgba(138, 197, 218, 0.3);
-  border: 1px solid #00AEEF;
-  border-radius: 16px;
-  color: #00AEEF !important;
-  font-weight: 900;
-  padding: 16px 36px;
-}
-
-.barMenu a {
-  color: #00AEEF !important;
-}
-
-.barMenuIcon {
-  width: 50px;
-  height: 50px;
-}
-
 .closeButton {
   width: 20px;
   height: 20px;
+}
+
+.pcContainer {
+  padding-left: 7%;
+  padding-right: 7%;
+}
+
+.phoneNumber,
+.email {
+  font-family: 'SF-Pro-Display', sans-serif;
+  font-weight: 600;
+  color: #00112B;
+  font-size: 0.9vw;
+  min-width: 213px;
+}
+
+.personImgContainer {
+  top: -39%;
+  right: 0;
+}
+
+.mainBox {
+  padding-right: 5%;
+}
+
+.mainBoxContent {
+  padding-top: 3%;
+}
+
+.mainBoxItem {
+  width: 20%;
+}
+
+.fastlyAccessTitleContainer {
+  margin-top: 2%;
+}
+
+.fastlyAccessTitle {
+  font-weight: 510;
+  font-size: 16px;
+  color: rgba(0, 17, 43, 0.4);
+}
+
+.fastlyAccessTitleDecor {
+  background-color: rgba(0, 17, 43, 0.08);
+  height: 1px;
+}
+
+.appDownload {
+  padding-left: 1%;
+}
+
+@media screen and (max-width: 768px) {
+
+  .phoneNumber,
+  .email {
+    font-size: 3.5vw;
+    min-width: auto;
+  }
+
+  .mainBox {
+    padding-right: 0;
+  }
+
+  .appDownload {
+    padding-left: 0;
+    margin-top: 4%;
+  }
 }

@@ -1,44 +1,28 @@
-import bg_link_btn from "../../../assets/images/bg-link-btn.png";
 import styles from "./style.module.css";
 import { useEffect, useState } from "react";
-import { isMobile, isDesktop, isTablet } from "react-device-detect";
+import { randomInterger } from "../../../utils/functions";
+import link_bg from "../../../assets/images/link-bg.png";
+import { Link } from "react-router-dom";
 
-const getRandomSpeed = () => {
-  return Math.floor(Math.random() * 49) + 50; // Random speed between 50 and 99 ms
-}
-
-export default function LinkItemComponent({ index, mbUrl, pcUrl, url }) {
-  const [speed, setSpeed] = useState(getRandomSpeed());
+export default function LinkItemComponent({ link, index }) {
+  const [speed, setSpeed] = useState(randomInterger(50, 99));
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setSpeed(getRandomSpeed());
-    }, 1000 * index);
+      setSpeed(randomInterger(50, 99));
+    }, randomInterger(2000, 5000));
 
     return () => clearInterval(interval);
 
   }, [index]);
 
-  const handleClick = () => {
-    if (isMobile || isTablet) {
-      window.open(mbUrl, '_blank');
-    }
-    else if (isDesktop) {
-      window.open(pcUrl, '_blank');
-    }
-    else {
-      window.open(url, '_blank');
-    }
-  }
-
   return (
-    <div className={`flex-fill d-flex justify-content-center align-items-center cursor-pointer gap-3 position-relative ${styles.link}`} onClick={handleClick}>
-      <img className="w-100" src={bg_link_btn} alt="bg_link_btn" />
-      <div className={styles.leftLink}>
-        <div className={styles.linkName}>LINK 0{index}</div>
-        <div className={styles.linkCTA}>Vào ngay</div>
-      </div>
-      <div className={styles.linkSpeed}>{speed} ms</div>
+    <div className={`position-relative`}>
+      <img className={`w-100`} src={link_bg} alt="link_bg" />
+      <Link to={link.url} className={`w-100 h-100 position-absolute top-0 start-0 d-flex justify-content-between`}>
+        <div className={`col-7 d-flex justify-content-center ${styles.linkIndex}`}>LINK 0{index + 1}</div>
+        <div className={`col-5 d-flex justify-content-center align-items-center ${styles.linkSpeed}`}>{speed}ms</div>
+      </Link>
     </div>
   )
 }

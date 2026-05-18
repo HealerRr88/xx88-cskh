@@ -1,49 +1,27 @@
-.link {
-  width: 202px;
-  max-width: 202px;
-}
-
-.leftLink {
-  position: absolute;
-  left: 15%;
-}
-
-.linkName {
-  color: white;
-  font-weight: 900;
-  line-height: 18px;
-}
-
-.linkCTA {
-  font-size: 14px;
-  color: white;
-  font-weight: 500;
+.linkIndex {
+  color: #fff;
+  font-size: 0.95vw;
+  font-weight: 700;
+  padding-left: 13%;
+  padding-top: 4.5%;
 }
 
 .linkSpeed {
   font-weight: 700;
-  font-size: 18px;
-  color: #1C6783;
-  position: absolute;
-  right: 10%;
+  font-size: 1.1vw;
+  color: #00ADEE;
+  padding-bottom: 2%;
 }
 
 @media screen and (max-width: 768px) {
-  .link {
-    width: calc(100% / 3 - 8px);
-    max-width: auto;
-  }
-
-  .linkName {
-    font-size: 11px;
-    line-height: 12px;
-  }
-
-  .linkCTA {
-    font-size: 9px;
+  .linkIndex {
+    font-size: 2vw;
+    padding-left: 12.5%;
+    padding-top: 5.5%;
   }
 
   .linkSpeed {
-    font-size: 10px;
+    font-size: 2.8vw;
+    padding-bottom: 0;
   }
 }

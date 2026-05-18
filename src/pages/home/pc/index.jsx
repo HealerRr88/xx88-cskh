@@ -1,36 +1,36 @@
 import HeaderComponent from "../../../components/header";
-import nap_tien_icon from "../../../assets/images/nap-tien-icon.png";
-import rut_tien_icon from "../../../assets/images/rut-tien-icon.png";
-import khuyen_mai_icon from "../../../assets/images/khuyen-mai-icon.png";
-import tai_khoan_icon from "../../../assets/images/tai-khoan-icon.png";
-import khieu_nai_icon from "../../../assets/images/khieu-nai-icon.png";
-import telegram_icon from "../../../assets/images/telegram-icon.png";
-
-// Bar Menu Images
-import hotline_icon from "../../../assets/images/hotline-icon.png";
-import dai_ly_icon from "../../../assets/images/dai-ly-icon.png";
-import code_free_icon from "../../../assets/images/code-free-icon.png";
-import facebook_icon from "../../../assets/images/facebook-icon.png";
-import qua_tang_icon from "../../../assets/images/qua-tang-icon.png";
-import huong_dan_icon from "../../../assets/images/huong-dan-icon.png";
-import kenh_su_kien_icon from "../../../assets/images/kenh-su-kien-icon.png";
-import livestream_icon from "../../../assets/images/livestream-icon.png";
-import thuong_hieu_icon from "../../../assets/images/thuong-hieu-icon.png";
-import thien_nguyen_icon from "../../../assets/images/thien-nguyen-icon.png";
-
-import grid_menu_center_item from "../../../assets/images/grid-menu-center-item.png";
-import homeStyles from "../style.module.css";
-import pcStyles from "./style.module.css";
-import { Link } from "react-router-dom";
-import AppDownloadComponent from "../../../components/app_download";
-import LinksComponent from "../../../components/links";
-import { CODE_FREE_URL, DAILY_URL, FACEBOOK_URL, HOTLINE_NUMBER, HUONG_DAN_URL, KENH_SU_KIEN_URL, KHIEU_NAI_URL, KHUYEN_MAI_URL, LINK_KEYS, LIVESTREAM_URL, NAP_TIEN_URL, QUA_TANG_URL, R2_BUCKET_URL, RUT_TIEN_URL, TAI_KHOAN_URL, TELEGRAM_URL, THIEN_NGUYEN_URL, THUONG_HIEU_URL } from "../../../utils/config";
-
-import { buildFileUrl } from "../../../utils/functions";
+import { buildFileUrl, getLinkByKey } from "../../../utils/functions";
 import { createRef, Fragment, useRef } from "react";
 import Draggable from "react-draggable";
 import styles from "./style.module.css";
+import { Link } from "react-router-dom";
+import LinksComponent from "../../../components/links";
+import title_img from "../../../assets/images/title.png";
+import phone_bg from "../../../assets/images/phone-bg.png";
+import email_bg from "../../../assets/images/email-bg.png";
+import { isMobile } from "react-device-detect";
+import phone_icon from "../../../assets/images/phone-icon.svg";
+import email_icon from "../../../assets/images/email-icon.svg";
+import main_box_bg from "../../../assets/images/main-box-bg.png";
+import AppDownloadComponent from "../../../components/app_download";
+import { LINK_KEYS, R2_BUCKET_URL } from "../../../utils/config";
+import person_img from "../../../assets/images/person.png";
 
+import nap_tien from "../../../assets/images/nap-tien.png";
+import rut_tien from "../../../assets/images/rut-tien.png";
+import khuyen_mai from "../../../assets/images/khuyen-mai.png";
+import tai_khoan from "../../../assets/images/tai-khoan.png";
+import khieu_nai from "../../../assets/images/khieu-nai.png";
+import hotline from "../../../assets/images/hotline.png";
+import dai_ly from "../../../assets/images/dai-ly.png";
+import code_game from "../../../assets/images/code-game.png";
+import qua_tang from "../../../assets/images/qua-tang.png";
+import huong_dan from "../../../assets/images/huong-dan.png";
+import kenh_su_kien from "../../../assets/images/kenh-su-kien.png";
+import facebook from "../../../assets/images/facebook.png";
+import livestream from "../../../assets/images/livestream.png";
+import thuong_hieu from "../../../assets/images/thuong-hieu.png";
+import thien_nguyen from "../../../assets/images/thien-nguyen.png";
 
 export default function PCPage({ links, gifs }) {
 
@@ -46,104 +46,115 @@ export default function PCPage({ links, gifs }) {
 
   return (
     <>
-      <div className="pb-5">
-        <HeaderComponent
-          links={links}
-        />
-
-        {/* Grid Menu */}
-        <div className="container d-flex justify-content-center align-items-center mt-3">
-          <div className="flex-fill d-flex flex-column justify-content-center align-items-end gap-4">
-            <Link to={links.find(x => x.key === LINK_KEYS.NAP_TIEN)?.url || NAP_TIEN_URL} className={`d-flex justify-content-center align-items-center gap-2 ${homeStyles.gridMenuItem}`}>
-              <img src={nap_tien_icon} alt="Nạp tiền" />
-              <span>NẠP TIỀN</span>
-            </Link>
-            <Link to={links.find(x => x.key === LINK_KEYS.RUT_TIEN)?.url || RUT_TIEN_URL} className={`d-flex justify-content-center align-items-center gap-2 ${homeStyles.gridMenuItem}`}>
-              <img src={rut_tien_icon} alt="Rút tiền" />
-              <span>RÚT TIỀN</span>
-            </Link>
-            <Link to={links.find(x => x.key === LINK_KEYS.KHUYEN_MAI)?.url || KHUYEN_MAI_URL} className={`d-flex justify-content-center align-items-center gap-2 ${homeStyles.gridMenuItem}`}>
-              <img src={khuyen_mai_icon} alt="Khuyến mãi" />
-              <span>KHUYẾN MÃI</span>
-            </Link>
+      <HeaderComponent links={links} />
+      <div className={`${styles.pcContainer}`}>
+        <div className={`position-relative`}>
+          <div className="w-100 position-absolute top-0 start-0">
+            <div className={`col-md-3 col-11`}>
+              <img className={`w-100 ${styles.titleImg}`} src={title_img} alt="title" />
+            </div>
+            <div className={`col-md-3 col-12 d-flex align-items-center mt-md-4 mt-3`}>
+              <Link to={`tel:${getLinkByKey(links, LINK_KEYS.PHONE, isMobile)}`} className={`d-block col-6 pe-md-0 pe-2 position-relative`}>
+                <img className={`w-100`} src={phone_bg} alt="phone_bg" />
+                <div className={`w-100 h-100 position-absolute top-0 start-0 d-flex align-items-center justify-content-center ${styles.phoneNumber}`}>
+                  <img src={phone_icon} alt="phone_icon" />
+                  <div className={`ms-1`}>
+                    {
+                      getLinkByKey(links, LINK_KEYS.PHONE, isMobile)
+                    }
+                  </div>
+                </div>
+              </Link>
+              <Link to={`mailto:${getLinkByKey(links, LINK_KEYS.EMAIL, isMobile)}`} className={`col-6 ps-md-0 ps-2 position-relative`}>
+                <img className={`w-100`} src={email_bg} alt="email_bg" />
+                <div className={`w-100 h-100 position-absolute top-0 start-0 d-flex align-items-center justify-content-center ${styles.email}`}>
+                  <img src={email_icon} alt="email_icon" />
+                  <div className={`ms-2`}>
+                    {
+                      getLinkByKey(links, LINK_KEYS.EMAIL, isMobile)
+                    }
+                  </div>
+                </div>
+              </Link>
+            </div>
           </div>
 
-          <div className="col-6">
-            <img className="w-100" src={grid_menu_center_item} alt="Menu Center" />
-          </div>
 
-          <div className="flex-fill d-flex flex-column justify-content-center align-items-start gap-4">
-            <Link to={links.find(x => x.key === LINK_KEYS.TAI_KHOAN)?.url || TAI_KHOAN_URL} className={`d-flex justify-content-center align-items-center gap-2 ${homeStyles.gridMenuItem}`}>
-              <img src={tai_khoan_icon} alt="Tài khoản" />
-              <span>TÀI KHOẢN</span>
-            </Link>
-            <Link to={links.find(x => x.key === LINK_KEYS.KHIEU_NAI)?.url || KHIEU_NAI_URL} className={`d-flex justify-content-center align-items-center gap-2 ${homeStyles.gridMenuItem}`}>
-              <img src={khieu_nai_icon} alt="Khiếu nại" />
-              <span>KHIẾU NẠI</span>
-            </Link>
-            <Link to={links.find(x => x.key === LINK_KEYS.TELEGRAM)?.url || TELEGRAM_URL} className={`d-flex justify-content-center align-items-center gap-2 ${homeStyles.gridMenuItem}`}>
-              <img src={telegram_icon} alt="Telegram" />
-              <span>TELEGRAM</span>
-            </Link>
+          <div className={`d-flex flex-wrap justify-content-center align-items-end mt-md-4 mt-3`}>
+            <div className={`col-md-7 col-12 position-relative ${styles.mainBox}`}>
+              <div className={`col-5 position-absolute z-3 ${styles.personImgContainer}`}>
+                <img className={`w-100`} src={person_img} alt="person_img" />
+              </div>
+              <div className={`w-100 position-relative`}>
+                <img className={`w-100`} src={main_box_bg} alt="main_box_bg" />
+                <div className={`w-100 h-100 position-absolute top-0 top-0 ${styles.mainBoxContent}`}>
+
+                  <div className={`d-flex flex-wrap align-items-center justify-content-center px-3`}>
+                    <Link to={getLinkByKey(links, LINK_KEYS.NAP_TIEN, isMobile)} className={`d-block px-2 ${styles.mainBoxItem}`}>
+                      <img className="w-100" src={nap_tien} alt="nap_tien" />
+                    </Link>
+                    <Link to={getLinkByKey(links, LINK_KEYS.RUT_TIEN, isMobile)} className={`d-block px-2 ${styles.mainBoxItem}`}>
+                      <img className="w-100" src={rut_tien} alt="rut_tien" />
+                    </Link>
+                    <Link to={getLinkByKey(links, LINK_KEYS.KHUYEN_MAI, isMobile)} className={`d-block px-2 ${styles.mainBoxItem}`}>
+                      <img className="w-100" src={khuyen_mai} alt="khuyen_mai" />
+                    </Link>
+                    <Link to={getLinkByKey(links, LINK_KEYS.TAI_KHOAN, isMobile)} className={`d-block px-2 ${styles.mainBoxItem}`}>
+                      <img className="w-100" src={tai_khoan} alt="tai_khoan" />
+                    </Link>
+                    <Link to={getLinkByKey(links, LINK_KEYS.KHIEU_NAI, isMobile)} className={`d-block px-2 ${styles.mainBoxItem}`}>
+                      <img className="w-100" src={khieu_nai} alt="khieu_nai" />
+                    </Link>
+                  </div>
+
+                  <div className={`d-flex align-items-center justify-content-center px-4 ${styles.fastlyAccessTitleContainer}`}>
+                    <div className={`flex-fill ${styles.fastlyAccessTitleDecor}`}></div>
+                    <div className={`px-3 ${styles.fastlyAccessTitle}`}>TRUY CẬP NHANH</div>
+                    <div className={`flex-fill ${styles.fastlyAccessTitleDecor}`}></div>
+                  </div>
+
+                  <div className={`d-flex flex-wrap align-items-center justify-content-center px-3 mt-3`}>
+                    <Link to={getLinkByKey(links, LINK_KEYS.HOTLINE, isMobile)} className={`d-block px-2 ${styles.mainBoxItem}`}>
+                      <img className="w-100" src={hotline} alt="hotline" />
+                    </Link>
+                    <Link to={getLinkByKey(links, LINK_KEYS.DAI_LY, isMobile)} className={`d-block px-2 ${styles.mainBoxItem}`}>
+                      <img className="w-100" src={dai_ly} alt="dai_ly" />
+                    </Link>
+                    <Link to={getLinkByKey(links, LINK_KEYS.CODE_GAME, isMobile)} className={`d-block px-2 ${styles.mainBoxItem}`}>
+                      <img className="w-100" src={code_game} alt="code_game" />
+                    </Link>
+                    <Link to={getLinkByKey(links, LINK_KEYS.QUA_TANG, isMobile)} className={`d-block px-2 ${styles.mainBoxItem}`}>
+                      <img className="w-100" src={qua_tang} alt="qua_tang" />
+                    </Link>
+                    <Link to={getLinkByKey(links, LINK_KEYS.HUONG_DAN, isMobile)} className={`d-block px-2 ${styles.mainBoxItem}`}>
+                      <img className="w-100" src={huong_dan} alt="huong_dan" />
+                    </Link>
+                    <Link to={getLinkByKey(links, LINK_KEYS.KENH_SU_KIEN, isMobile)} className={`d-block px-2 mt-4 ${styles.mainBoxItem}`}>
+                      <img className="w-100" src={kenh_su_kien} alt="kenh_su_kien" />
+                    </Link>
+                    <Link to={getLinkByKey(links, LINK_KEYS.FACEBOOK, isMobile)} className={`d-block px-2 mt-4 ${styles.mainBoxItem}`}>
+                      <img className="w-100" src={facebook} alt="facebook" />
+                    </Link>
+                    <Link to={getLinkByKey(links, LINK_KEYS.LIVESTREAM, isMobile)} className={`d-block px-2 mt-4 ${styles.mainBoxItem}`}>
+                      <img className="w-100" src={livestream} alt="livestream" />
+                    </Link>
+                    <Link to={getLinkByKey(links, LINK_KEYS.THUONG_HIEU, isMobile)} className={`d-block px-2 mt-4 ${styles.mainBoxItem}`}>
+                      <img className="w-100" src={thuong_hieu} alt="thuong_hieu" />
+                    </Link>
+                    <Link to={getLinkByKey(links, LINK_KEYS.THIEN_NGUYEN, isMobile)} className={`d-block px-2 mt-4 ${styles.mainBoxItem}`}>
+                      <img className="w-100" src={thien_nguyen} alt="thien_nguyen" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className={`col-md-5 col-12 mt-md-4 mt-3 ${styles.appDownload}`}>
+              <AppDownloadComponent links={links} />
+            </div>
           </div>
         </div>
-
-        <AppDownloadComponent
-          links={links}
-        />
-
-        <div className="text-center">
-          <div className={`d-inline-flex gap-5 mt-4 ${pcStyles.barMenu}`}>
-            <Link to={`tel:${links.find(x => x.key === LINK_KEYS.HOTLINE)?.url || HOTLINE_NUMBER}`} className="d-flex flex-column justify-content-center align-items-center gap-1">
-              <img className={pcStyles.barMenuIcon} src={hotline_icon} alt="Hotline" />
-              <span>Hotline</span>
-            </Link>
-            <Link to={links.find(x => x.key === LINK_KEYS.DAI_LY)?.url || DAILY_URL} className="d-flex flex-column justify-content-center align-items-center gap-1">
-              <img className={pcStyles.barMenuIcon} src={dai_ly_icon} alt="Đại lý" />
-              <span>Đại lý</span>
-            </Link>
-            <Link to={links.find(x => x.key === LINK_KEYS.CODE_FREE)?.url || CODE_FREE_URL} className="d-flex flex-column justify-content-center align-items-center gap-1">
-              <img className={pcStyles.barMenuIcon} src={code_free_icon} alt="Code Free" />
-              <span>Code Free</span>
-            </Link>
-            <Link to={links.find(x => x.key === LINK_KEYS.FACEBOOK)?.url || FACEBOOK_URL} className="d-flex flex-column justify-content-center align-items-center gap-1">
-              <img className={pcStyles.barMenuIcon} src={facebook_icon} alt="Facebook" />
-              <span>Facebook</span>
-            </Link>
-            <Link to={links.find(x => x.key === LINK_KEYS.QUA_TANG)?.url || QUA_TANG_URL} className="d-flex flex-column justify-content-center align-items-center gap-1">
-              <img className={pcStyles.barMenuIcon} src={qua_tang_icon} alt="Quà tặng" />
-              <span>Quà tặng</span>
-            </Link>
-            <Link to={links.find(x => x.key === LINK_KEYS.HUONG_DAN)?.url || HUONG_DAN_URL} className="d-flex flex-column justify-content-center align-items-center gap-1">
-              <img className={pcStyles.barMenuIcon} src={huong_dan_icon} alt="Hướng dẫn" />
-              <span>Hướng dẫn</span>
-            </Link>
-            <Link to={links.find(x => x.key === LINK_KEYS.KENH_SU_KIEN)?.url || KENH_SU_KIEN_URL} className="d-flex flex-column justify-content-center align-items-center gap-1">
-              <img className={pcStyles.barMenuIcon} src={kenh_su_kien_icon} alt="Kênh sự kiện" />
-              <span>Kênh sự kiện</span>
-            </Link>
-            <Link to={links.find(x => x.key === LINK_KEYS.LIVESTREAM)?.url || LIVESTREAM_URL} className="d-flex flex-column justify-content-center align-items-center gap-1">
-              <img className={pcStyles.barMenuIcon} src={livestream_icon} alt="Livestream" />
-              <span>Livestream</span>
-            </Link>
-            <Link to={links.find(x => x.key === LINK_KEYS.THUONG_HIEU)?.url || THUONG_HIEU_URL} className="d-flex flex-column justify-content-center align-items-center gap-1">
-              <img className={pcStyles.barMenuIcon} src={thuong_hieu_icon} alt="Thương Hiệu" />
-              <span>Thương Hiệu</span>
-            </Link>
-            <Link to={links.find(x => x.key === LINK_KEYS.THIEN_NGUYEN)?.url || THIEN_NGUYEN_URL} className="d-flex flex-column justify-content-center align-items-center gap-1">
-              <img className={pcStyles.barMenuIcon} src={thien_nguyen_icon} alt="Thiện Nguyện" />
-              <span>Thiện Nguyện</span>
-            </Link>
-          </div>
-        </div>
-
-        <LinksComponent
-          links={
-            links.filter(x => x.key.startsWith(LINK_KEYS.PRE_FIX))
-          }
-        />
+        <LinksComponent links={links} />
       </div>
-
 
       {
         gifs.length > 0 && gifs.map((item, index) => {
